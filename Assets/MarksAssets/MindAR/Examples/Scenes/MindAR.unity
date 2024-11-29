@@ -43028,7 +43028,7 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 2
-  m_Camera: {fileID: 0}
+  m_Camera: {fileID: 1545017628}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -56432,8 +56432,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   zoomSpeed: 0.05
-  minScale: 1
-  maxScale: 1.5
+  minScale: 0.5
+  maxScale: 2.5
   zoomThreshold: 2
   zoomTransitionDuration: 0.2
   dragThreshold: 5

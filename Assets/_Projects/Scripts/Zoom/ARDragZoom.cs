@@ -71,7 +71,7 @@ public class ARDragZoom : MonoBehaviour
         }
         else if (Input.touchCount == 2)
         {
-            //HandleTwoFingerGesture();
+            HandleTwoFingerGesture();
         }
         else
         {
@@ -141,8 +141,8 @@ public class ARDragZoom : MonoBehaviour
             }
             else // Zoom (different directions)
             {
-                //isZooming = true;
-                //HandleZoom(-distanceDelta * zoomSpeed); // Invert zooming behavior
+                isZooming = true;
+                HandleZoom(-distanceDelta * zoomSpeed); // Invert zooming behavior
             }
         }
 
