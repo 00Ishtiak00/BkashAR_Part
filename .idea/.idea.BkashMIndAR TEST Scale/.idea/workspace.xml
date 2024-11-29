@@ -7,8 +7,10 @@
     <list default="true" id="d888f5f1-bef1-4408-b1a0-46f8e7741fd9" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.BkashMIndAR TEST Scale/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BkashMIndAR TEST Scale/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/MarksAssets/MindAR/Examples/Scenes/MindAR.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MarksAssets/MindAR/Examples/Scenes/MindAR.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MarksAssets/MindAR/Scripts/ImageTargetMono.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MarksAssets/MindAR/Scripts/ImageTargetMono.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/build_info" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StreamingAssets/build_info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Projects/Scripts/Zoom/ARDragZoom.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Projects/Scripts/Zoom/ARDragZoom.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Projects/Scripts/AR/TransformTweener.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Projects/Scripts/AR/TransformTweener.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Projects/Scripts/Glow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Projects/Scripts/Glow.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +19,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5d4b8207e95a4123a86ea5bab607935e9000/e2/d4661dbe/MindAR.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo"><![CDATA[{
   "customColor": "",
@@ -85,7 +90,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1732905395164</updated>
-      <workItem from="1732905397865" duration="3576000" />
+      <workItem from="1732905397865" duration="7026000" />
     </task>
     <servers />
   </component>

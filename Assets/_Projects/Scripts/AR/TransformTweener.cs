@@ -17,7 +17,7 @@ public class TransformTweener : MonoBehaviour
     
     [Header("Script References")]
     public WaveEffectGrouped WaveEffectGrouped;
-    public CameraHandAnimation CameraHandAnimation;
+    //public CameraHandAnimation CameraHandAnimation;
     
     
     
@@ -40,7 +40,7 @@ public class TransformTweener : MonoBehaviour
             {
                 WaveEffectGrouped.StartWaveAnimation();
                 Debug.Log("Tween completed!");
-                CameraHandAnimation.PlayAnimationSequence();
+                //CameraHandAnimation.PlayAnimationSequence(); //No need For instruction In AR
             });
             //WaveEffectGrouped.StartWaveAnimation();
         }

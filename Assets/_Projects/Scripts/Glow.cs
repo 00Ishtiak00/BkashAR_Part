@@ -16,10 +16,10 @@ public class Glow : MonoBehaviour
 
     private void Start()
     {
-        PlayFirstSequence();
+        //PlayFirstSequence();
     }
 
-    private void PlayFirstSequence()
+    public void PlayFirstSequence()
     {
         if (sprites.Length == 0 || imageComponent == null || transferTweener == null) return;
 

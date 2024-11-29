@@ -7,6 +7,7 @@ namespace MarksAssets.MindAR {
         public int targetIndex = 0;
         public UnityEvent targetFound;
         public UnityEvent targetLost;
+        public Glow glow; // Add this line to include a reference to the Glow component
 
         #pragma warning disable CS0414
         private ImageTarget imageTarget;
@@ -25,6 +26,10 @@ namespace MarksAssets.MindAR {
             //SetPositionAndScale();
             //FadeInGameObject();
             enabled = true;
+            glow.PlayFirstSequence(); // Call the PlayFirstSequence function
+            //MindAR.pause(true); // Pause the AR session but keep the camera feed on
+            
+            
         };
 
         imageTarget.targetLost += () => {
