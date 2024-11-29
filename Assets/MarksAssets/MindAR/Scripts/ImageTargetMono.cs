@@ -23,8 +23,8 @@ namespace MarksAssets.MindAR {
         imageTarget.targetFound += () => {
             targetFound.Invoke();
             //SetPositionAndScale();
-            FadeInGameObject();
-            //enabled = true;
+            //FadeInGameObject();
+            enabled = true;
         };
 
         imageTarget.targetLost += () => {
