@@ -26,8 +26,9 @@ namespace MarksAssets.MindAR {
             //SetPositionAndScale();
             //FadeInGameObject();
             enabled = true;
-            glow.PlayFirstSequence(); // Call the PlayFirstSequence function
-            Invoke("PauseARSession", 5f); // Call PauseARSession method after 5 seconds
+            //glow.PlayFirstSequence(); // Call the PlayFirstSequence function
+            Invoke("Glow", 2f); // Call Glow method after 1 second  
+            //Invoke("PauseARSession", 5f); // Call PauseARSession method after 5 seconds
             //MindAR.pause(true); // Pause the AR session but keep the camera feed on
             
             
@@ -47,11 +48,11 @@ namespace MarksAssets.MindAR {
         void Update () {
         #if UNITY_WEBGL && !UNITY_EDITOR
         position.Set(imageTarget.posx, imageTarget.posy, imageTarget.posz);
-        //rotation.Set(imageTarget.rotx, imageTarget.roty, imageTarget.rotz, imageTarget.rotw);
+        rotation.Set(0, 0, imageTarget.rotz, imageTarget.rotw);
         scale.Set(imageTarget.scale, imageTarget.scale, imageTarget.scale);
 
         transform.position = position;
-        //transform.rotation = rotation;
+        transform.rotation = rotation;
         transform.localScale = scale;
         #endif
         }
@@ -80,6 +81,11 @@ namespace MarksAssets.MindAR {
         
         private void PauseARSession() {
             MindAR.pause(true); // Pause the AR session but keep the camera feed on
+        }
+
+        private void Glow()
+        {
+            glow.PlayFirstSequence(); // Call the PlayFirstSequence function
         }
     }
 }
