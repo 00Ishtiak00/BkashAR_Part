@@ -27,6 +27,7 @@ namespace MarksAssets.MindAR {
             //FadeInGameObject();
             enabled = true;
             glow.PlayFirstSequence(); // Call the PlayFirstSequence function
+            Invoke("PauseARSession", 5f); // Call PauseARSession method after 5 seconds
             //MindAR.pause(true); // Pause the AR session but keep the camera feed on
             
             
@@ -75,6 +76,10 @@ namespace MarksAssets.MindAR {
             canvasGroup.DOFade(1, 1f).OnComplete(() => {
                 enabled = true;
             });
+        }
+        
+        private void PauseARSession() {
+            MindAR.pause(true); // Pause the AR session but keep the camera feed on
         }
     }
 }
