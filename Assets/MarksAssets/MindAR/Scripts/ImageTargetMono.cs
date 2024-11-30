@@ -8,12 +8,15 @@ namespace MarksAssets.MindAR {
         public UnityEvent targetFound;
         public UnityEvent targetLost;
         public Glow glow; // Add this line to include a reference to the Glow component
+        public ResetTransform resetTransform; // Add this line to include a reference to the ResetTransform component
+        public TransformTweener transformTweener; // Add this line to include a reference to the TransformTweener component
 
         #pragma warning disable CS0414
         private ImageTarget imageTarget;
         private Vector3 position = new Vector3();
         private Quaternion rotation = new Quaternion();
         private Vector3 scale = new Vector3();
+        
 
         void Start () {
         #if UNITY_WEBGL && !UNITY_EDITOR
@@ -22,22 +25,24 @@ namespace MarksAssets.MindAR {
         imageTarget = MindAR.imageTargets[targetIndex];
 
         imageTarget.targetFound += () => {
+            transformTweener.HideARInstruction();
             targetFound.Invoke();
             //SetPositionAndScale();
             FadeInGameObject();
             enabled = true;
             //glow.PlayFirstSequence(); // Call the PlayFirstSequence function
             Invoke("Glow", 2f); // Call Glow method after 1 second  
-            Invoke("PauseARSession", 10f); // Call PauseARSession method after 5 seconds
+            //Invoke("PauseARSession", 5f); // Call PauseARSession method after 5 seconds
             //MindAR.pause(true); // Pause the AR session but keep the camera feed on
             
             
         };
-
+        
         imageTarget.targetLost += () => {
             targetLost.Invoke();
             //transform.position = new Vector3(Screen.width / 2, Screen.height / 2, transform.position.z);
             enabled = false;
+            resetTransform.SetPositionToCenterOfScreen(); // Call the SetPositionToCenterOfScreen function
         };
 
         enabled = false;
@@ -46,7 +51,7 @@ namespace MarksAssets.MindAR {
 
 
         void Update () {
-        #if UNITY_WEBGL && !UNITY_EDITOR
+        //#if UNITY_WEBGL && !UNITY_EDITOR
         position.Set(imageTarget.posx, imageTarget.posy, imageTarget.posz);
         rotation.Set(0, 0, imageTarget.rotz, imageTarget.rotw);
         scale.Set(imageTarget.scale, imageTarget.scale, imageTarget.scale);
@@ -54,7 +59,8 @@ namespace MarksAssets.MindAR {
         transform.position = position;
         transform.rotation = rotation;
         transform.localScale = scale;
-        #endif
+
+        //#endif
         }
 
         public void SetPositionAndScale()

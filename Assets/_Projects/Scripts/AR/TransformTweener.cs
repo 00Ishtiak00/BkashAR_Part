@@ -13,6 +13,8 @@ public class TransformTweener : MonoBehaviour
     public float duration = 1f; // Duration of the tween
     public Ease easeType = Ease.Linear; // Type of easing for the tween
     
+    public GameObject ARInstruction;
+    
 
     
     [Header("Script References")]
@@ -26,7 +28,7 @@ public class TransformTweener : MonoBehaviour
 
     private void Start()
     {
-       
+        IsntructionAR();
     }
 
     public void TweenMap()
@@ -47,6 +49,34 @@ public class TransformTweener : MonoBehaviour
         else
         {
             Debug.LogWarning("Target Transform is not assigned.");
+        }
+    }
+
+    public void IsntructionAR()
+    {
+        if (ARInstruction != null)
+        {
+            ARInstruction.transform.localPosition = new Vector3(ARInstruction.transform.localPosition.x, -1500, ARInstruction.transform.localPosition.z);
+            ARInstruction.transform.DOLocalMoveY(0, duration).SetEase(easeType).OnComplete(() =>
+            {
+                Debug.Log("Tween completed!");
+            });
+        }
+        else
+        {
+            Debug.LogWarning("ARInstruction GameObject is not assigned.");
+        }
+    }
+    
+    public void HideInstructionAR()
+    {
+        if (ARInstruction != null)
+        {
+            ARInstruction.SetActive(false);
+        }
+        else
+        {
+            Debug.LogWarning("ARInstruction GameObject is not assigned.");
         }
     }
 
