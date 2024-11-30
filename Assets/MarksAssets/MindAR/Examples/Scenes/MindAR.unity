@@ -873,7 +873,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &293531071
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2018,6 +2018,7 @@ GameObject:
   - component: {fileID: 1196434100}
   - component: {fileID: 1196434101}
   - component: {fileID: 1196434102}
+  - component: {fileID: 1196434103}
   m_Layer: 0
   m_Name: Parent
   m_TagString: Untagged
@@ -2034,7 +2035,7 @@ Transform:
   m_GameObject: {fileID: 1196434099}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.009}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.001, y: 0.001, z: 0.001}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -2066,6 +2067,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uiText: {fileID: 293531072}
+--- !u!114 &1196434103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1196434099}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d12e9ad17beb754d94f820c75121cfe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  zoomSpeed: 0.005
+  minScale: 0.0005
+  maxScale: 0.003
+  zoomThreshold: 2
+  zoomTransitionDuration: 1
+  dragThreshold: 5
+  dragSpeed: 0.01
+  isDragging: 0
+  time: 0
+  touchInteractionsEnabled: 1
+  graphicRaycaster: {fileID: 938322732123100099}
 --- !u!114 &1210326308 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7076437667899962712, guid: 8ffc4dbe9d0cf1744bc5eb33731a1a01, type: 3}
@@ -3543,15 +3567,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5885349364321485578, guid: ade8d66585fa7d842b22896ac7027a60, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5885349364321485578, guid: ade8d66585fa7d842b22896ac7027a60, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5885349364321485578, guid: ade8d66585fa7d842b22896ac7027a60, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 672
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5885349364321485578, guid: ade8d66585fa7d842b22896ac7027a60, type: 3}
       propertyPath: m_SizeDelta.y
@@ -19610,7 +19634,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7853081762162937973}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6d12e9ad17beb754d94f820c75121cfe, type: 3}
   m_Name: 

@@ -16,15 +16,22 @@ namespace MarksAssets.MindAR {
         private Vector3 position = new Vector3();
         private Quaternion rotation = new Quaternion();
         private Vector3 scale = new Vector3();
+        
+        private Vector3 initialPosition;
+        private Vector3 initialRotation;
+        private Vector3 initialScale;
 
         void Start () {
-        #if UNITY_WEBGL && !UNITY_EDITOR
+            
+            //SaveTransform();
+        //#if UNITY_WEBGL && !UNITY_EDITOR
         if (!MindAR.isRunning()) MindAR.start();
 
         imageTarget = MindAR.imageTargets[targetIndex];
 
         
         imageTarget.targetFound += () => {
+            resetTransform.ResetPositionAndRotation(); // Call the ResetPositionAndRotation function
             transformTweener.HideInstructionAR(); // Call the HideInstructionAR function
             targetFound.Invoke();
             //SetPositionAndScale();
@@ -32,13 +39,14 @@ namespace MarksAssets.MindAR {
             enabled = true;
             //glow.PlayFirstSequence(); // Call the PlayFirstSequence function
             Invoke("Glow", 2f); // Call Glow method after 1 second  
-            Invoke("PauseARSession", 5f); // Call PauseARSession method after 5 seconds
+            //Invoke("PauseARSession", 5f); // Call PauseARSession method after 5 seconds
             //MindAR.pause(true); // Pause the AR session but keep the camera feed on
             
             
         };
         
         imageTarget.targetLost += () => {
+            resetTransform.SetPositionToCenterOfScreen(); // Call the SetPositionToCenterOfScreen function
             transformTweener.IsntructionAR(); // Call the IsntructionAR function
             targetLost.Invoke();
             enabled = false;
@@ -46,7 +54,7 @@ namespace MarksAssets.MindAR {
         };
 
         enabled = false;
-        #endif
+        //#endif
         }
 
 
@@ -94,5 +102,6 @@ namespace MarksAssets.MindAR {
         {
             glow.PlayFirstSequence(); // Call the PlayFirstSequence function
         }
+
     }
 }

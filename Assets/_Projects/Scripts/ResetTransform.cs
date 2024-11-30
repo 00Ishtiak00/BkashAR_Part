@@ -3,13 +3,24 @@ using UnityEngine;
 
 public class ResetTransform : MonoBehaviour
 {
+    private Vector3 initialPosition;
+    private Vector3 initialRotation;
+    private Vector3 initialScale;
+
+    private bool _firstTime = true;
     [ContextMenu("ResetPositionAndRotation")]
     // Function to reset position and rotation
     public void ResetPositionAndRotation()
     {
-        transform.position = Vector3.zero; // Reset position to (0, 0, 0)
-        transform.rotation = Quaternion.identity; // Reset rotation to (0, 0, 0)
-        //Debug.Log($"{gameObject.name} position and rotation have been reset to zero.");
+        if (_firstTime)
+        {
+            SaveTransform();
+            _firstTime = false;
+            return;
+        }
+        transform.localPosition=initialPosition;
+        transform.localRotation=Quaternion.Euler(initialRotation);
+        transform.localScale=initialScale;
     }
 
     public TMP_Text uiText; // Reference to the UI Text component
@@ -18,8 +29,8 @@ public class ResetTransform : MonoBehaviour
     {
         if (uiText != null)
         {
-            Vector3 position = transform.position;
-            Quaternion rotation = transform.rotation;
+            Vector3 position = transform.localPosition;
+            Quaternion rotation = transform.localRotation;
             Vector3 scale = transform.localScale;
 
             uiText.text = $"Position: {position}\n" +
@@ -35,5 +46,12 @@ public class ResetTransform : MonoBehaviour
         Vector3 screenCenter = new Vector3(Screen.width / 2, Screen.height / 2, transform.position.z);
         transform.position = Camera.main.ScreenToWorldPoint(screenCenter);
         transform.rotation = Quaternion.Euler(0, 0, 0); // Reset rotation to (0, 0, 0)
+    }
+    
+    private void SaveTransform()
+    {
+        initialPosition=transform.localPosition;
+        initialRotation=transform.localRotation.eulerAngles;
+        initialScale=transform.localScale;
     }
 }
