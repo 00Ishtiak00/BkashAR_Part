@@ -52,6 +52,7 @@ public class TransformTweener : MonoBehaviour
         }
     }
 
+    [ContextMenu("IsntructionAR")]
     public void IsntructionAR()
     {
         if (ARInstruction != null)

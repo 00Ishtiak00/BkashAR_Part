@@ -12,11 +12,11 @@ public class ResetTransform : MonoBehaviour
         //Debug.Log($"{gameObject.name} position and rotation have been reset to zero.");
     }
 
-    //public TMP_Text uiText; // Reference to the UI Text component
+    public TMP_Text uiText; // Reference to the UI Text component
 
     void Update()
     {
-        /*if (uiText != null)
+        if (uiText != null)
         {
             Vector3 position = transform.position;
             Quaternion rotation = transform.rotation;
@@ -25,7 +25,7 @@ public class ResetTransform : MonoBehaviour
             uiText.text = $"Position: {position}\n" +
                           $"Rotation: {rotation.eulerAngles}\n" +
                           $"Scale: {scale}";
-        }*/
+        }
     }
 
     [ContextMenu("SetPositionToCenterOfScreen")]
