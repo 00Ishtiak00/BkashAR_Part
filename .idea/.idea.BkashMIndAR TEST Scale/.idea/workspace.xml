@@ -6,15 +6,14 @@
   <component name="ChangeListManager">
     <list default="true" id="d888f5f1-bef1-4408-b1a0-46f8e7741fd9" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.BkashMIndAR TEST Scale/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BkashMIndAR TEST Scale/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MarksAssets/MindAR/Examples/Scenes/MindAR.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MarksAssets/MindAR/Examples/Scenes/MindAR.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MarksAssets/MindAR/Scripts/ImageTargetMono.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MarksAssets/MindAR/Scripts/ImageTargetMono.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/build_info" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StreamingAssets/build_info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Projects/Scripts/ResetTransform.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Projects/Scripts/ResetTransform.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Projects/Scripts/LockRotaion.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Projects/Scripts/LockRotaion.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Build2/Build/Build2.data.unityweb" beforeDir="false" afterPath="$PROJECT_DIR$/Build2/Build/Build2.data.unityweb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Build2/Build/Build2.framework.js.unityweb" beforeDir="false" afterPath="$PROJECT_DIR$/Build2/Build/Build2.framework.js.unityweb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Build2/Build/Build2.loader.js" beforeDir="false" afterPath="$PROJECT_DIR$/Build2/Build/Build2.loader.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Build2/Build/Build2.wasm.unityweb" beforeDir="false" afterPath="$PROJECT_DIR$/Build2/Build/Build2.wasm.unityweb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Build2/StreamingAssets/build_info" beforeDir="false" afterPath="$PROJECT_DIR$/Build2/StreamingAssets/build_info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build2/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Build2/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
