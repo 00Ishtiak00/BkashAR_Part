@@ -17,7 +17,7 @@ PlayerSettings:
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
-  m_ShowUnitySplashScreen: 1
+  m_ShowUnitySplashScreen: 0
   m_ShowUnitySplashLogo: 1
   m_SplashScreenOverlayOpacity: 1
   m_SplashScreenAnimation: 1
@@ -458,19 +458,19 @@ PlayerSettings:
     AFRAME_SRC: js/aframe.min
     AUTO_START: true
     BACKGROUND_COLR: 
-    FILTER_BETA: .001
-    FILTER_MIN_CF: .00001
+    FILTER_BETA: 800
+    FILTER_MIN_CF: 0.03
     IMAGE_TARGET_SRC: Compiled Target/target.mind
     MAX_TRACK: 1
     MINDAR_IMAGE_AFRAME_PROD_SRC: js/mindar-image-aframe.prod
     MINDAR_IMAGE_PROD_SRC: js/mindar-image.prod
-    MISS_TOLERANCE: 5
+    MISS_TOLERANCE: 20
     NUMBER_TRACK: 1
     UI_ERROR: yes
     UI_LOADING: yes
     UI_SCANNING: yes
     UI_SCANNING_ON_TARGET_LOST: no
-    WARMUP_TOLERANCE: 5
+    WARMUP_TOLERANCE: 15
   mobileMTRendering:
     Android: 1
     iPhone: 1

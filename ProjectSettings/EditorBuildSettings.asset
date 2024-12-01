@@ -8,6 +8,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/MarksAssets/MindAR/Examples/Scenes/MindAR.unity
     guid: 6519e4c30b183ab49902520324d12ceb
+  - enabled: 0
+    path: Assets/_Projects/Scenes/MindAR backup.unity
+    guid: ed7b6554330e24f41b2a36971171316a
+  - enabled: 0
+    path: Assets/_Projects/Scenes/MindARTesting.unity
+    guid: 5b5e71cc4d5cf1b4fa5f46e15b829d89
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 289c1b55c9541489481df5cc06664110, type: 3}
   m_UseUCBPForAssetBundles: 0
