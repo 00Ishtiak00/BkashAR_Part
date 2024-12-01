@@ -459,7 +459,7 @@ PlayerSettings:
     AUTO_START: true
     BACKGROUND_COLR: 
     FILTER_BETA: .001
-    FILTER_MIN_CF: .0001
+    FILTER_MIN_CF: .00001
     IMAGE_TARGET_SRC: Compiled Target/target.mind
     MAX_TRACK: 1
     MINDAR_IMAGE_AFRAME_PROD_SRC: js/mindar-image-aframe.prod

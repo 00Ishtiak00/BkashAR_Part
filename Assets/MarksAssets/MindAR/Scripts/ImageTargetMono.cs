@@ -61,7 +61,7 @@ namespace MarksAssets.MindAR {
         void Update () {
         #if UNITY_WEBGL && !UNITY_EDITOR
         position.Set(imageTarget.posx, imageTarget.posy, imageTarget.posz);
-        rotation.Set(0, 0, imageTarget.rotz, imageTarget.rotw);
+        rotation.Set(imageTarget.rotx,imageTarget.roty, imageTarget.rotz, imageTarget.rotw);
         scale.Set(imageTarget.scale, imageTarget.scale, imageTarget.scale);
 
         transform.position = position;
@@ -75,7 +75,7 @@ namespace MarksAssets.MindAR {
         {
 #if UNITY_WEBGL && !UNITY_EDITOR
         position.Set(imageTarget.posx, imageTarget.posy, imageTarget.posz);
-        rotation.Set(imageTarget.rotx, 0, imageTarget.rotz, imageTarget.rotw);
+        rotation.Set(imageTarget.rotx, imageTarget.roty, imageTarget.rotz, imageTarget.rotw);
         scale.Set(imageTarget.scale, imageTarget.scale, imageTarget.scale);
 
         transform.position = position;

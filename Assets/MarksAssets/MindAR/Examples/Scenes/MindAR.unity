@@ -4836,7 +4836,7 @@ MonoBehaviour:
   audioSource: {fileID: 659023734}
   audioClip: {fileID: 8300000, guid: 04017b72eabb5d94ea26a6f8df35ab39, type: 3}
   buttonDataList: {fileID: 11400000, guid: 0441937290e126646987a27f32be638c, type: 2}
-  commonDeepLinkURL: https://example.com
+  commonDeepLinkURL: https://bka.sh/next?c=savings&uuid=xyz
   animationDuration: 0.5
   ARDragZoom: {fileID: 7853081762162937974}
 --- !u!114 &399076115843804078
@@ -16173,7 +16173,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7678172173333962522}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 086f52e32c8aa6949bea4aa943b47aba, type: 3}
   m_Name: 
@@ -16403,7 +16403,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 13ecbf26794250940902e53444d91d37, type: 3}
   - {fileID: 21300000, guid: 18d4c354ad2efef4fba8ae36458e7e7d, type: 3}
   - {fileID: 21300000, guid: 8b2df218231626d45ba8e7e3df6df662, type: 3}
-  animationDuration: 1
+  animationDuration: 2
   transferTweener: {fileID: 2785271612136489735}
 --- !u!222 &6302352049483083003
 CanvasRenderer:
@@ -21380,7 +21380,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7678172173333962522}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: da67a0c216ba6cb4483c114832ac3de7, type: 3}
   m_Name: 
