@@ -18,7 +18,8 @@
 		<div id="unity-loading-bar" style="position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); display: none;">
 			<div id="unity-logo" style="width: 154px; height: 130px; background: url('images/unity-logo-{{{ SPLASH_SCREEN_STYLE.toLowerCase() }}}.png') no-repeat center;"></div>
 			<div id="unity-progress-bar-empty" style="width: 141px; height: 18px; margin-top: 10px; margin-left: 6.5px; background: url('images/progress-bar-empty-{{{ SPLASH_SCREEN_STYLE.toLowerCase() }}}.png') no-repeat center;">
-			  <div id="unity-progress-bar-full" style="width: 0%; height: 18px; margin-top: 10px; background: url('images/progress-bar-full-{{{ SPLASH_SCREEN_STYLE.toLowerCase() }}}.png') no-repeat center;"></div>
+			<div id="unity-progress-bar-full" style="width: 0%; height: 18px; margin-top: 10px; background: url('images/progress-bar-full-{{{ SPLASH_SCREEN_STYLE.toLowerCase() }}}.png') no-repeat center;"></div>
+			<div id="volume-image" style="width: 140px; aspect-ratio: 840 / 92; background: url('images/Volume.png') no-repeat center; background-size: contain; margin: 10px auto 0;"></div>
 			</div>
 		</div>
 	</div>
@@ -145,7 +146,15 @@
 				console.error("Permission not granted or error:", error);
 				alert("Camera permission is required to continue.");
 			});
-
     </script>
+		<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-6KVTEDJ64B"></script>
+	<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+
+	gtag('config', 'G-6KVTEDJ64B');
+</script>
   </body>
 </html>

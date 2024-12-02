@@ -850,7 +850,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 215335275}
-  - component: {fileID: 215335276}
   - component: {fileID: 215335277}
   m_Layer: 0
   m_Name: ARContent
@@ -875,52 +874,6 @@ Transform:
   - {fileID: 1196434100}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &215335276
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 215335274}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a770271f2fbdf084a8269b6ccadcc0ec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  targetIndex: 0
-  targetFound:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1196434099}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-  targetLost:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1196434099}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-  glow: {fileID: 6280020818990040567}
-  resetTransform: {fileID: 1196434102}
-  transformTweener: {fileID: 2785271612136489735}
 --- !u!114 &215335277
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2277,10 +2230,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   zoomSpeed: 0.005
-  minScale: 0.0005
+  minScale: 0.001
   maxScale: 0.003
   zoomThreshold: 2
-  zoomTransitionDuration: 1
+  zoomTransitionDuration: 0.5
   dragThreshold: 5
   dragSpeed: 0.01
   isDragging: 0
@@ -9337,7 +9290,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetTransform: {fileID: 2725142471380912992}
   targetZPosition: 5
-  duration: 1
+  duration: 2
   easeType: 1
   ARInstruction: {fileID: 11097134}
   WaveEffectGrouped: {fileID: 2383787337442566408}
@@ -16387,12 +16340,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7678172173333962522}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 086f52e32c8aa6949bea4aa943b47aba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animationType: 6
+  animationType: 1
   imageComponent: {fileID: 2994318932595994254}
   sprites:
   - {fileID: 21300000, guid: acd2158c26b890c4f9d29e585dd9593b, type: 3}
@@ -16419,10 +16372,10 @@ MonoBehaviour:
   leftRightDistance: 2
   leftRightDuration: 1
   rotationTargets: []
-  rotationSpeed: 180
+  rotationSpeed: 0
   scaleTarget: {fileID: 0}
-  scaleInSize: {x: 1.2, y: 1.2, z: 1.2}
-  scaleDuration: 1
+  scaleInSize: {x: 0, y: 0, z: 0}
+  scaleDuration: 0
 --- !u!1 &6200641072661177119
 GameObject:
   m_ObjectHideFlags: 0
@@ -19509,7 +19462,6 @@ GameObject:
   - component: {fileID: 6200313735167545889}
   - component: {fileID: 7174175480851507425}
   - component: {fileID: 8584784784117886417}
-  - component: {fileID: 8584784784117886418}
   m_Layer: 0
   m_Name: BkashPhone_Aniamtion
   m_TagString: Untagged
@@ -21585,18 +21537,6 @@ MonoBehaviour:
   popupManager: {fileID: 393494170668230205}
   button: {fileID: 7174175480851507425}
   buttonIndex: 55
---- !u!114 &8584784784117886418
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7678172173333962522}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: da67a0c216ba6cb4483c114832ac3de7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!222 &8596394072255512844
 CanvasRenderer:
   m_ObjectHideFlags: 0
