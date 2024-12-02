@@ -47,7 +47,29 @@ public class PopupManager : MonoBehaviour
             audioSource.loop = true;
             audioSource.Play();
         }
+        
+        //OnscreenClicked();
     }
+    
+    /*public void OnscreenClicked()
+    {
+        // Check for false click condition (example: specific screen area or gesture)
+        if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
+        {
+            // Example condition: touch in a specific screen area
+            Vector2 touchPosition = Input.GetTouch(0).position;
+            if (touchPosition.x < Screen.width / 2 && touchPosition.y < Screen.height / 2)
+            {
+                // Play the audio
+                if (audioSource != null && audioClip != null)
+                {
+                    audioSource.clip = audioClip;
+                    audioSource.loop = true;
+                    audioSource.Play();
+                }
+            }
+        }
+    }*/
 
     public void OnButtonClicked(int buttonIndex)
     {

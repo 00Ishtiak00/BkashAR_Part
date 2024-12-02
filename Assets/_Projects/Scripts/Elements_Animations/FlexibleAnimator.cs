@@ -105,7 +105,7 @@ public class FlexibleAnimator : MonoBehaviour
         if (leftRightTarget == null) return;
 
         // Apply a rotation animation on the Z-axis using a sequence
-        leftRightTarget.DORotate(new Vector3(0, 0, leftRightDistance), leftRightDuration, RotateMode.LocalAxisAdd)
+        leftRightTarget.DOLocalRotate(new Vector3(0, 0, leftRightDistance), leftRightDuration, RotateMode.LocalAxisAdd)
             .SetEase(Ease.InOutSine)
             .SetLoops(-1, LoopType.Yoyo); // Rotate back and forth in a Yoyo loop
     }
