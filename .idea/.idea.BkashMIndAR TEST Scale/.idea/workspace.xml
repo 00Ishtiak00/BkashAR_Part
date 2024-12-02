@@ -6,15 +6,14 @@
   <component name="ChangeListManager">
     <list default="true" id="d888f5f1-bef1-4408-b1a0-46f8e7741fd9" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.BkashMIndAR TEST Scale/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BkashMIndAR TEST Scale/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MarksAssets/MindAR/Examples/Scenes/MindAR.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MarksAssets/MindAR/Examples/Scenes/MindAR.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/build_info" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StreamingAssets/build_info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/WebGLTemplates/MindAR/images/Volume.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/WebGLTemplates/MindAR/images/Volume.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Projects/Scripts/ARTarget.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Projects/Scripts/ARTarget.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Projects/UI/White Text UI/9.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Projects/UI/White Text UI/9.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Testing/Build/Testing.data.unityweb" beforeDir="false" afterPath="$PROJECT_DIR$/Testing/Build/Testing.data.unityweb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Testing/Build/Testing.framework.js.unityweb" beforeDir="false" afterPath="$PROJECT_DIR$/Testing/Build/Testing.framework.js.unityweb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Testing/Build/Testing.loader.js" beforeDir="false" afterPath="$PROJECT_DIR$/Testing/Build/Testing.loader.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Testing/Build/Testing.wasm.unityweb" beforeDir="false" afterPath="$PROJECT_DIR$/Testing/Build/Testing.wasm.unityweb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Testing/StreamingAssets/build_info" beforeDir="false" afterPath="$PROJECT_DIR$/Testing/StreamingAssets/build_info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Testing/images/Volume.png" beforeDir="false" afterPath="$PROJECT_DIR$/Testing/images/Volume.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
