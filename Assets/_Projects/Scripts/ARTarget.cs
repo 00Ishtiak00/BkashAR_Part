@@ -31,8 +31,8 @@ public class ARTarget : MonoBehaviour {
 
         imageTarget.targetFound += () => {
             targetFound.Invoke();
-            FadeInGameObject();
             resetTransform.ResetPositionAndRotation(); // Call the ResetPositionAndRotation function
+            FadeInGameObject();
             transformTweener.HideInstructionAR(); // Call the HideInstructionAR function
             Invoke("Glow", 2f); // Call Glow method after 1 second  
             SmoothAttachToMarker(); // Use smooth transition for first attachment
@@ -40,9 +40,9 @@ public class ARTarget : MonoBehaviour {
         };
 
         imageTarget.targetLost += () => {
+            targetLost.Invoke();
             resetTransform.SetPositionToCenterOfScreen(); // Call the SetPositionToCenterOfScreen function
             transformTweener.IsntructionAR(); // Call the IsntructionAR function
-            targetLost.Invoke();
         };
     }
 
