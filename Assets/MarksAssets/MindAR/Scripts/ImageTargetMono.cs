@@ -56,7 +56,7 @@ namespace MarksAssets.MindAR {
         
         imageTarget.targetLost += () => {
             isTracking = false; // Set the flag to false when the target is lost
-            PauseARSession(); // Call the PauseARSession function
+            //PauseARSession(); // Call the PauseARSession function
             //transformTweener.IsntructionAR(); // Call the IsntructionAR function
             targetLost.Invoke();
             enabled = false;

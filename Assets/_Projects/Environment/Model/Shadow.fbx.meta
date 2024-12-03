@@ -3,7 +3,17 @@ guid: b6fef0c960b609a48b90105bdd143ebf
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Shadow_M
+    second: {fileID: 2100000, guid: 6887587a446bc914b87bf3ecce5ba2cc, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Shadow
+    second: {fileID: 2800000, guid: 192d4d447cab87a478f38e2bf397fa97, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
