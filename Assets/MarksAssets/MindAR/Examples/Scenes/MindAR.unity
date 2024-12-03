@@ -4541,6 +4541,7 @@ MonoBehaviour:
   StartBtn: {fileID: 1396076750}
   PauseBtn: {fileID: 1684107383}
   StopBtn: {fileID: 21863068}
+  ShareBtn: {fileID: 0}
   ResumeBtn: {fileID: 2133042582}
   DownloadBtn: {fileID: 1550780005}
   CreateRecordingMicrophoneIngameAudioBtn: {fileID: 1366087696}
@@ -4726,7 +4727,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1986630390
 MonoBehaviour:
   m_ObjectHideFlags: 0
