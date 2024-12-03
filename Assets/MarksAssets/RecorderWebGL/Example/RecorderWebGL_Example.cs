@@ -5,7 +5,7 @@ using status = MarksAssets.RecorderWebGL.RecorderWebGL.status;
 using System.Collections;
 using static MarksAssets.RecorderWebGL.RecorderWebGL;
 using UnityEngine.EventSystems;
-//using MarksAssets.ShareNSaveWebGL;//if using my https://assetstore.unity.com/packages/tools/integration/sharensavewebgl-181122 asset as well.
+using MarksAssets.ShareNSaveWebGL;//if using my https://assetstore.unity.com/packages/tools/integration/sharensavewebgl-181122 asset as well.
 
 public class RecorderWebGL_Example : MonoBehaviour {
 
@@ -13,7 +13,7 @@ public class RecorderWebGL_Example : MonoBehaviour {
     public Text RecordedText, StatusText;
     public int recordForNSeconds = -1;//-1 means that it won't use timer. So it will stop recording when tapping on stop button. Any value >= 0 will use timer. Then you'd need to tap and hold the start button, and wait for the timer or release the button earlier to stop the recording before the time's up.
 
-    //private byte[] bytes;//used if recorded as byte array
+    private byte[] bytes;//used if recorded as byte array
 
     private Coroutine timerRoutine = null;
     private MediaRecorderOptions mro = new MediaRecorderOptions("video/webm;codecs=vp8,opus");//This is to avoid creating .mkv files on browsers that can create .webm, as it seems some video players have trouble with the generated .mkv and not detect the full length of the video.

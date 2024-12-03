@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 738a0060b7af0ac4f9f0435c56713fcb
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 181122
+  packageName: ShareNSaveWebGL
+  packageVersion: 2.3
+  assetPath: Assets/MarksAssets/ShareNSaveWebGL/Example/ScreenShotter.cs
+  uploadId: 543149

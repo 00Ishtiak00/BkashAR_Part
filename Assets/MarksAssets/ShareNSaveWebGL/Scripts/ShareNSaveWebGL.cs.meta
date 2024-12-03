@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: b3a847a72e627b6428f9b642a08141fd
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 181122
+  packageName: ShareNSaveWebGL
+  packageVersion: 2.3
+  assetPath: Assets/MarksAssets/ShareNSaveWebGL/Scripts/ShareNSaveWebGL.cs
+  uploadId: 543149
