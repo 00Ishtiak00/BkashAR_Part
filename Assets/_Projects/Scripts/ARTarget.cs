@@ -129,10 +129,11 @@ public class ARTarget : MonoBehaviour {
         imageTarget.targetFound += () => {
             targetFound.Invoke();
             resetTransform.ResetPositionAndRotation(); // Call the ResetPositionAndRotation function
+            SmoothAttachToMarker(); // Use smooth transition for first attachment
             FadeInGameObject();
             transformTweener.HideInstructionAR(); // Call the HideInstructionAR function
-            Invoke("Glow", 2f); // Call Glow method after 1 second  
-            SmoothAttachToMarker(); // Use smooth transition for first attachment
+            //Invoke("Glow", 2f); // Call Glow method after 1 second  
+            //SmoothAttachToMarker(); // Use smooth transition for first attachment
             
         };
 
@@ -155,10 +156,10 @@ public class ARTarget : MonoBehaviour {
         Vector3 smoothedPosition = Vector3.Lerp(previousPosition, position, smoothingFactor);
         Quaternion smoothedRotation = Quaternion.Lerp(previousRotation, rotation, rotationSmoothingFactor);
 
-        // Apply the smoothed position, rotation, and scale
+        /*// Apply the smoothed position, rotation, and scale
         transform.DOMove(smoothedPosition, 0.2f).SetEase(Ease.OutQuad); // Smooth position move
         transform.DORotateQuaternion(smoothedRotation, 0.2f).SetEase(Ease.OutQuad); // Smooth rotation
-        transform.DOScale(scale, 0.2f).SetEase(Ease.OutQuad); // Smooth scale
+        transform.DOScale(scale, 0.2f).SetEase(Ease.OutQuad); // Smooth scale*/
 
         // Update the previous values for the next frame
         previousPosition = smoothedPosition;
@@ -190,7 +191,7 @@ public class ARTarget : MonoBehaviour {
             canvasGroup = gameObject.AddComponent<CanvasGroup>();
         }
         canvasGroup.alpha = 0;
-        canvasGroup.DOFade(1, 1f);
+        canvasGroup.DOFade(1, 5f);
     }
     
     private void PauseARSession() {

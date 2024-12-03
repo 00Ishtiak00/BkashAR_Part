@@ -1,6 +1,7 @@
 using System.Security.Cryptography;
 using UnityEngine;
 using DG.Tweening;
+using MarksAssets.MindAR;
 using UnityEngine.Assertions.Comparers;
 using UnityEngine.UI;
 
@@ -28,6 +29,7 @@ public class ARDragZoom : MonoBehaviour
 
     [Header("Script References")]
     [SerializeField] private GraphicRaycaster graphicRaycaster; // Reference to the GraphicRaycaster component
+    [SerializeField] private ImageTargetMono imageTargetMono; // Reference to the ImageTargetMono component
     
     // Flag to enable/disable interactions
     private bool isEnabled = true;
@@ -62,6 +64,12 @@ public class ARDragZoom : MonoBehaviour
 
     void Update()
     {
+        if (imageTargetMono != null && imageTargetMono.isTracking)
+        {
+            // Disable drag and zoom functionality while tracking
+            return;
+        }
+        
         if (!touchInteractionsEnabled)
             return; // If disabled, skip further processing
 

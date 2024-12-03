@@ -1,3 +1,4 @@
+using MarksAssets.MindAR;
 using TMPro;
 using UnityEngine;
 
@@ -6,6 +7,8 @@ public class ResetTransform : MonoBehaviour
     private Vector3 initialPosition;
     private Vector3 initialRotation;
     private Vector3 initialScale;
+    
+    public ImageTargetMono ImageTargetMono;
 
     private bool _firstTime = true;
     [ContextMenu("ResetPositionAndRotation")]
@@ -46,6 +49,8 @@ public class ResetTransform : MonoBehaviour
         Vector3 screenCenter = new Vector3(Screen.width / 2, Screen.height / 2, transform.position.z);
         transform.position = Camera.main.ScreenToWorldPoint(screenCenter);
         transform.rotation = Quaternion.Euler(0, 0, 0); // Reset rotation to (0, 0, 0)
+        
+        //ImageTargetMono.FadeInGameObject();
     }
     
     private void SaveTransform()

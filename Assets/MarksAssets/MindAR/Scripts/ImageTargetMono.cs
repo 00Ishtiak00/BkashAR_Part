@@ -1,6 +1,8 @@
 using UnityEngine;
 using UnityEngine.Events;
-using DG.Tweening; // Add this line to include DoTween
+using DG.Tweening;
+using TMPro;
+using UnityEngine.UI; // Add this line to include DoTween
 
 namespace MarksAssets.MindAR {
     public class ImageTargetMono : MonoBehaviour {
@@ -20,6 +22,14 @@ namespace MarksAssets.MindAR {
         private Vector3 initialPosition;
         private Vector3 initialRotation;
         private Vector3 initialScale;
+        
+        private Quaternion previousRotation = new Quaternion();
+        private float rotationThreshold = 1.2f; // Adjust this threshold to avoid jitter
+
+
+        public TMP_Text rotationText; // Add this line to include a reference to the TMP_Text component
+        
+        public bool isTracking = false; // Flag to indicate if the target is being tracked
 
         void Start () {
             
@@ -31,25 +41,26 @@ namespace MarksAssets.MindAR {
 
         
         imageTarget.targetFound += () => {
+            isTracking = true; // Set the flag to true when the target is found
             resetTransform.ResetPositionAndRotation(); // Call the ResetPositionAndRotation function
             transformTweener.HideInstructionAR(); // Call the HideInstructionAR function
             targetFound.Invoke();
             //SetPositionAndScale();
             FadeInGameObject();
             enabled = true;
-            //glow.PlayFirstSequence(); // Call the PlayFirstSequence function
-            Invoke("Glow", 2f); // Call Glow method after 1 second  
-            //Invoke("PauseARSession", 5f); // Call PauseARSession method after 5 seconds
-            //MindAR.pause(true); // Pause the AR session but keep the camera feed on
+            Invoke("Glow", 1.5f); // Call Glow method after 1 second  
+      
             
             
         };
         
         imageTarget.targetLost += () => {
-            resetTransform.SetPositionToCenterOfScreen(); // Call the SetPositionToCenterOfScreen function
-            transformTweener.IsntructionAR(); // Call the IsntructionAR function
+            isTracking = false; // Set the flag to false when the target is lost
+            PauseARSession(); // Call the PauseARSession function
+            //transformTweener.IsntructionAR(); // Call the IsntructionAR function
             targetLost.Invoke();
             enabled = false;
+            resetTransform.SetPositionToCenterOfScreen(); // Call the SetPositionToCenterOfScreen function
 
         };
 
@@ -58,17 +69,52 @@ namespace MarksAssets.MindAR {
         }
 
 
-        void Update () {
-        #if UNITY_WEBGL && !UNITY_EDITOR
-        position.Set(imageTarget.posx, imageTarget.posy, imageTarget.posz);
-        rotation.Set(imageTarget.rotx,imageTarget.roty, imageTarget.rotz, imageTarget.rotw);
-        scale.Set(imageTarget.scale, imageTarget.scale, imageTarget.scale);
+        void Update () 
+        {
+            if (isTracking)
+            {
+                position.Set(imageTarget.posx, imageTarget.posy, imageTarget.posz);
+                rotation.Set(imageTarget.rotx, imageTarget.roty, imageTarget.rotz, imageTarget.rotw);
+                scale.Set(imageTarget.scale, imageTarget.scale, imageTarget.scale);
 
-        transform.position = position;
-        transform.rotation = rotation;
-        transform.localScale = scale;
+                float deltaX = Mathf.Abs(rotation.eulerAngles.x - previousRotation.eulerAngles.x);
+                float deltaY = Mathf.Abs(rotation.eulerAngles.y - previousRotation.eulerAngles.y);
+                float deltaZ = Mathf.Abs(rotation.eulerAngles.z - previousRotation.eulerAngles.z);
 
-        #endif
+                if (deltaX > rotationThreshold || deltaY > rotationThreshold || deltaZ > rotationThreshold)
+                {
+                    rotation = Quaternion.Lerp(previousRotation, rotation, 0.1f);
+
+                    transform.DOMove(position, 0.2f).SetEase(Ease.OutQuad);
+                    transform.DORotateQuaternion(rotation, 0.2f).SetEase(Ease.OutQuad);
+                    transform.DOScale(scale, 0.2f).SetEase(Ease.OutQuad);
+
+                    previousRotation = rotation;
+                }
+            }
+
+            /*// Check if the change in rotation is above the threshold
+            if (Quaternion.Angle(previousRotation, rotation) > rotationThreshold) {
+                // Smoothly interpolate position and rotation using DOTween
+                transform.DOMove(position, 0.2f).SetEase(Ease.OutQuad);
+                transform.DORotateQuaternion(rotation, 0.2f).SetEase(Ease.OutQuad);
+                transform.DOScale(scale, 0.2f).SetEase(Ease.OutQuad);
+
+                // Update the previous rotation
+                previousRotation = rotation;
+            }*/
+
+            /*transform.position = position;
+            transform.rotation = rotation;
+            transform.localScale = scale;*/
+            
+            //#endif
+            
+            // Update the UI Text with the GameObject's rotation
+            if (rotationText != null) 
+            {
+                rotationText.text = "Rotation: " + transform.localRotation.eulerAngles.ToString();
+            } 
         }
 
         public void SetPositionAndScale()
@@ -84,7 +130,7 @@ namespace MarksAssets.MindAR {
 #endif
         }
 
-        private void FadeInGameObject() { 
+        public void FadeInGameObject() { 
             CanvasGroup canvasGroup = gameObject.GetComponent<CanvasGroup>();
             if (canvasGroup == null) {
                 canvasGroup = gameObject.AddComponent<CanvasGroup>();
@@ -94,8 +140,26 @@ namespace MarksAssets.MindAR {
                 enabled = true;
             });
         }
+        
+        public void FadeOutGameObject() {
+            CanvasGroup canvasGroup = gameObject.GetComponent<CanvasGroup>();
+            if (canvasGroup == null) {
+                canvasGroup = gameObject.AddComponent<CanvasGroup>();
+            }
+            canvasGroup.alpha = 1;
+            canvasGroup.DOFade(0, 1f).OnComplete(() => {
+                enabled = false;
+            });
+        }
         private void PauseARSession() {
+            
             MindAR.pause(true); // Pause the AR session but keep the camera feed on
+        }
+        
+        public void ResumeARSession() 
+        {
+            MindAR.pause(false); // Resume the AR session
+            
         }
 
         private void Glow()

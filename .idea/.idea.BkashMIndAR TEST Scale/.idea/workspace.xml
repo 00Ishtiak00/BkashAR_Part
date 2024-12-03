@@ -7,8 +7,11 @@
     <list default="true" id="d888f5f1-bef1-4408-b1a0-46f8e7741fd9" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.BkashMIndAR TEST Scale/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BkashMIndAR TEST Scale/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/MarksAssets/MindAR/Examples/Scenes/MindAR.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MarksAssets/MindAR/Examples/Scenes/MindAR.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MarksAssets/MindAR/Scripts/ImageTargetMono.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MarksAssets/MindAR/Scripts/ImageTargetMono.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/build_info" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StreamingAssets/build_info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Projects/Scripts/ARTarget.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Projects/Scripts/ARTarget.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Projects/Scripts/ResetTransform.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Projects/Scripts/ResetTransform.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Projects/Scripts/Zoom/ARDragZoom.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Projects/Scripts/Zoom/ARDragZoom.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Testing/Build/Testing.data.unityweb" beforeDir="false" afterPath="$PROJECT_DIR$/Testing/Build/Testing.data.unityweb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Testing/Build/Testing.framework.js.unityweb" beforeDir="false" afterPath="$PROJECT_DIR$/Testing/Build/Testing.framework.js.unityweb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Testing/Build/Testing.loader.js" beforeDir="false" afterPath="$PROJECT_DIR$/Testing/Build/Testing.loader.js" afterDir="false" />
@@ -26,6 +29,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5d4b8207e95a4123a86ea5bab607935e9000/50/2aaa1f8b/ImageTarget.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5d4b8207e95a4123a86ea5bab607935e9000/e2/d4661dbe/MindAR.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b5bf0c891ea345fe93688f835df32fdc1dda00/8e/9828d8cf/Behaviour.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b5bf0c891ea345fe93688f835df32fdc1dda00/e0/44973f25/Component.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Projects/Scripts/ARTarget.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Projects/Scripts/AudioForceSpeaker.cs" root0="FORCE_HIGHLIGHTING" />
