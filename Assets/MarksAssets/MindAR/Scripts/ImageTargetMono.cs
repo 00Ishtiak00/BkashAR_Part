@@ -45,6 +45,7 @@ namespace MarksAssets.MindAR {
             resetTransform.ResetPositionAndRotation(); // Call the ResetPositionAndRotation function
             transformTweener.HideInstructionAR(); // Call the HideInstructionAR function
             targetFound.Invoke();
+            ResetInitialTransform();
             //SetPositionAndScale();
             FadeInGameObject();
             enabled = true;
@@ -161,10 +162,22 @@ namespace MarksAssets.MindAR {
             MindAR.pause(false); // Resume the AR session
             
         }
+        
+        private void ResetTracking()
+        {
+            MindAR.start();
+        }
 
         private void Glow()
         {
             glow.PlayFirstSequence(); // Call the PlayFirstSequence function
+        }
+        
+        private void ResetInitialTransform()
+        {
+            transform.position = initialPosition;
+            transform.rotation = Quaternion.Euler(initialRotation);
+            transform.localScale = initialScale;
         }
 
     }

@@ -41,14 +41,37 @@ public class PopupManager : MonoBehaviour
         deepLinkButton.onClick.RemoveAllListeners();
         deepLinkButton.onClick.AddListener(() => OpenDeepLink());
         
+        /*if (audioSource != null && audioClip != null)
+        {
+            audioSource.clip = audioClip;
+            audioSource.loop = true;
+            audioSource.Play();
+        }*/
+        
+        //Invoke(nameof(DelayAudio), 1f);
+        
+        //OnscreenClicked();
+    }
+    private bool hasPlayedAudio = false;
+
+    public void Update()
+    {
+        if (!hasPlayedAudio && Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
+        {
+            DelayAudio();
+            hasPlayedAudio = true;
+        }
+    }
+    
+    
+    public void DelayAudio()
+    {
         if (audioSource != null && audioClip != null)
         {
             audioSource.clip = audioClip;
             audioSource.loop = true;
             audioSource.Play();
         }
-        
-        //OnscreenClicked();
     }
     
     /*public void OnscreenClicked()
