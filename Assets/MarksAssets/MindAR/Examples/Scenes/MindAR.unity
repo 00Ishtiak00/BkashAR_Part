@@ -3537,7 +3537,7 @@ Light:
   m_Enabled: 1
   serializedVersion: 11
   m_Type: 1
-  m_Color: {r: 0.9056604, g: 0.864681, b: 0.74759704, a: 1}
+  m_Color: {r: 0.9150943, g: 0.84905994, b: 0.77265036, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
@@ -12712,7 +12712,7 @@ Transform:
   m_GameObject: {fileID: 32925826545226311}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0.7071068, w: 0}
-  m_LocalPosition: {x: -16, y: 74, z: 180}
+  m_LocalPosition: {x: -16, y: 74, z: 10}
   m_LocalScale: {x: 2600, y: 10000, z: 2500}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -16158,6 +16158,7 @@ MonoBehaviour:
   transformTweener: {fileID: 3097326326405724170}
   rotationText: {fileID: 293531072}
   isTracking: 0
+  popupManager: {fileID: 393494170668230205}
 --- !u!114 &5528677855712667308
 MonoBehaviour:
   m_ObjectHideFlags: 0

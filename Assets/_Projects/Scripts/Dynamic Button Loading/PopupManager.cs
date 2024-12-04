@@ -48,11 +48,11 @@ public class PopupManager : MonoBehaviour
             audioSource.Play();
         }*/
         
-        //Invoke(nameof(DelayAudio), 1f);
+        Invoke(nameof(DelayAudio), .5f);
         
         //OnscreenClicked();
     }
-    private bool hasPlayedAudio = false;
+    /*private bool hasPlayedAudio = false;
 
     public void Update()
     {
@@ -61,7 +61,7 @@ public class PopupManager : MonoBehaviour
             DelayAudio();
             hasPlayedAudio = true;
         }
-    }
+    }*/
     
     
     public void DelayAudio()

@@ -31,6 +31,7 @@ namespace MarksAssets.MindAR {
         
         public bool isTracking = false; // Flag to indicate if the target is being tracked
 
+        public PopupManager popupManager; // Add this line to include a reference to the PopupManager component
         void Start () {
             
             //SaveTransform();
@@ -42,6 +43,7 @@ namespace MarksAssets.MindAR {
         
         imageTarget.targetFound += () => {
             isTracking = true; // Set the flag to true when the target is found
+            //PlaySoundOnTrack(); // Call the PlaySoundOnTrack function
             resetTransform.ResetPositionAndRotation(); // Call the ResetPositionAndRotation function
             transformTweener.HideInstructionAR(); // Call the HideInstructionAR function
             targetFound.Invoke();
@@ -50,6 +52,7 @@ namespace MarksAssets.MindAR {
             FadeInGameObject();
             enabled = true;
             Invoke("Glow", 1.5f); // Call Glow method after 1 second  
+            //PlaySoundOnTrack();
       
             
             
@@ -178,6 +181,16 @@ namespace MarksAssets.MindAR {
             transform.position = initialPosition;
             transform.rotation = Quaternion.Euler(initialRotation);
             transform.localScale = initialScale;
+        }
+        
+        public void PlaySoundOnTrack()
+        {
+            if (isTracking = true)
+            {
+                popupManager.DelayAudio(); // Call the PlayAudio function
+                isTracking=false;
+            }
+            
         }
 
     }

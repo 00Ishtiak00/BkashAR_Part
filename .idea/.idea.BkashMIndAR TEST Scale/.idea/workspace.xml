@@ -6,16 +6,15 @@
   <component name="ChangeListManager">
     <list default="true" id="d888f5f1-bef1-4408-b1a0-46f8e7741fd9" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.BkashMIndAR TEST Scale/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BkashMIndAR TEST Scale/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/A4/Build/A4.data.unityweb" beforeDir="false" afterPath="$PROJECT_DIR$/A4/Build/A4.data.unityweb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/A4/Build/A4.framework.js.unityweb" beforeDir="false" afterPath="$PROJECT_DIR$/A4/Build/A4.framework.js.unityweb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/A4/Build/A4.loader.js" beforeDir="false" afterPath="$PROJECT_DIR$/A4/Build/A4.loader.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/A4/Build/A4.wasm.unityweb" beforeDir="false" afterPath="$PROJECT_DIR$/A4/Build/A4.wasm.unityweb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/A4/StreamingAssets/build_info" beforeDir="false" afterPath="$PROJECT_DIR$/A4/StreamingAssets/build_info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/MarksAssets/MindAR/Examples/Scenes/MindAR.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MarksAssets/MindAR/Examples/Scenes/MindAR.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MarksAssets/RecorderWebGL/Example/RecorderWebGL_Example.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MarksAssets/RecorderWebGL/Example/RecorderWebGL_Example.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MarksAssets/MindAR/Scripts/ImageTargetMono.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MarksAssets/MindAR/Scripts/ImageTargetMono.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/build_info" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StreamingAssets/build_info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Projects/Scenes/Recording.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Projects/Scenes/Recording.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Recording/Build/Recording.data.unityweb" beforeDir="false" afterPath="$PROJECT_DIR$/Recording/Build/Recording.data.unityweb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Recording/Build/Recording.framework.js.unityweb" beforeDir="false" afterPath="$PROJECT_DIR$/Recording/Build/Recording.framework.js.unityweb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Recording/Build/Recording.loader.js" beforeDir="false" afterPath="$PROJECT_DIR$/Recording/Build/Recording.loader.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Recording/Build/Recording.wasm.unityweb" beforeDir="false" afterPath="$PROJECT_DIR$/Recording/Build/Recording.wasm.unityweb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Recording/StreamingAssets/build_info" beforeDir="false" afterPath="$PROJECT_DIR$/Recording/StreamingAssets/build_info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-6000.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-6000.dwlt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Projects/Scripts/Dynamic Button Loading/PopupManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Projects/Scripts/Dynamic Button Loading/PopupManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,7 +103,7 @@
       <workItem from="1732927418509" duration="252000" />
       <workItem from="1733037851206" duration="7425000" />
       <workItem from="1733123306131" duration="2654000" />
-      <workItem from="1733251419124" duration="10919000" />
+      <workItem from="1733251419124" duration="13228000" />
     </task>
     <servers />
   </component>
