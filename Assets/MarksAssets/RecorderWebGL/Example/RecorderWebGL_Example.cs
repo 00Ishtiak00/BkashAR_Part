@@ -94,6 +94,8 @@ public class RecorderWebGL_Example : MonoBehaviour {
         StatusText.text = "";
     }
 
+    
+    
     public void Download() {
         //RecorderWebGL.Save();
 

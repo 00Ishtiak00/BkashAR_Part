@@ -119,7 +119,7 @@ public class FlexibleAnimator : MonoBehaviour
             if (target != null)
             {
                 // Apply a continuous rotation on the Z-axis
-                target.DORotate(new Vector3(0, 0, -360), 360f / rotationSpeed, RotateMode.LocalAxisAdd)
+                target.DOLocalRotate(new Vector3(0, 0, -360), 360f / rotationSpeed, RotateMode.LocalAxisAdd)
                     .SetEase(Ease.Linear)
                     .SetLoops(-1, LoopType.Restart); // Continuous rotation
             }
