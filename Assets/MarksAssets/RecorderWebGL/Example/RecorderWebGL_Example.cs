@@ -41,6 +41,7 @@ public class RecorderWebGL_Example : MonoBehaviour {
     }
 
     public void StartRecording() {
+        ResetRecorder();
         CreateRecordingIngameAudio ();
         Invoke(nameof(DelayStart), 1.0f);
         //RecorderWebGL.Start(startClbk);
@@ -86,6 +87,12 @@ public class RecorderWebGL_Example : MonoBehaviour {
             RecorderWebGL.Resume(resumeClbk);
         }
     }
+    private void ResetRecorder() {
+        RecorderWebGL.Destroy();
+        bytes = null;
+        RecordedText.text = "";
+        StatusText.text = "";
+    }
 
     public void Download() {
         //RecorderWebGL.Save();
@@ -96,8 +103,8 @@ public class RecorderWebGL_Example : MonoBehaviour {
         //share();
     }
     
-    public void share() {
-        Download();
+    /*public void share() {
+        //Download();
         if (bytes != null) {
             // Check if sharing is supported
             MarksAssets.ShareNSaveWebGL.ShareNSaveWebGL.status shareStatus = ShareNSaveWebGL.CanShare(bytes, "video/webm", "recorded_video.webm");
@@ -109,6 +116,31 @@ public class RecorderWebGL_Example : MonoBehaviour {
                 ShareNSaveWebGL.Share(callback, bytes, "video/webm", "recorded_video.webm");
             } else {
                 Debug.LogError($"Cannot share: {shareStatus}");
+                // Clear the blob after sharing
+                bytes = null;
+            }
+        } else {
+            Debug.LogError("No recorded video available to share.");
+        }
+    }*/
+    
+    public void share() {
+        if (bytes != null) {
+            // Check if sharing is supported
+            MarksAssets.ShareNSaveWebGL.ShareNSaveWebGL.status shareStatus = ShareNSaveWebGL.CanShare(bytes, "video/mp4", "recorded_video.mp4");
+
+            if (shareStatus == MarksAssets.ShareNSaveWebGL.ShareNSaveWebGL.status.Success) {
+                Debug.Log("Sharing supported. Proceeding to share...");
+
+                // Save the video as MP4
+                ShareNSaveWebGL.Save(bytes, "video/mp4");
+
+                // Share the video file
+                ShareNSaveWebGL.Share(callback, bytes, "video/mp4", "recorded_video.mp4");
+            } else {
+                Debug.LogError($"Cannot share: {shareStatus}");
+                // Clear the blob after sharing
+                bytes = null;
             }
         } else {
             Debug.LogError("No recorded video available to share.");
@@ -181,10 +213,10 @@ public class RecorderWebGL_Example : MonoBehaviour {
         this.bytes = bytes;
 
         StartBtn.SetActive(true);
-        CreateRecordingMicrophoneIngameAudioBtn.SetActive(true);
-        CreateRecordingMicrophoneBtn.SetActive(true);
-        CreateRecordingIngameAudioBtn.SetActive(true);
-        CreateRecordingNoAudioBtn.SetActive(true);
+        //CreateRecordingMicrophoneIngameAudioBtn.SetActive(true);
+        //CreateRecordingMicrophoneBtn.SetActive(true);
+        //CreateRecordingIngameAudioBtn.SetActive(true);
+        //CreateRecordingNoAudioBtn.SetActive(true);
         if (RecorderWebGL.GetRecordingFileExtension() != null) {
             RecordedText.text = "Recorded a " + RecorderWebGL.GetRecordingFileExtension() + " file";
             DownloadBtn.SetActive(true);
