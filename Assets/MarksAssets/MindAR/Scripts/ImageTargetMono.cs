@@ -183,7 +183,7 @@ namespace MarksAssets.MindAR {
             transform.localScale = initialScale;
         }
         
-        public void PlaySoundOnTrack()
+        /*public void PlaySoundOnTrack()
         {
             if (isTracking = true)
             {
@@ -191,7 +191,7 @@ namespace MarksAssets.MindAR {
                 isTracking=false;
             }
             
-        }
+        }*/
 
     }
 }
