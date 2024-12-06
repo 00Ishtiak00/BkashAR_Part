@@ -4,13 +4,14 @@ using MarksAssets.RecorderWebGL;
 using UnityEngine.UI;
 using status = MarksAssets.RecorderWebGL.RecorderWebGL.status;
 using System.Collections;
+using DG.Tweening;
 using MarksAssets.ShareNSaveWebGL;
 using static MarksAssets.RecorderWebGL.RecorderWebGL;
 using UnityEngine.EventSystems;
 
 public class RecorderManager : MonoBehaviour
 {
-    public GameObject StartBtn, StopBtn, DownloadBtn, ShareBtn;
+    public GameObject StartBtn, StopBtn, DownloadBtn, ShareBtn, CancelBtn;
     
     public Text RecordedText, StatusText;
     
@@ -23,10 +24,17 @@ public class RecorderManager : MonoBehaviour
 
     private string fileName;
 
+    [SerializeField] private GameObject _btnAudioSourcesParentGO; // Parent GameObject containing all AudioSources
+    
+    [SerializeField] private PopupManager popupManager;
+    
+    public bool isRecording = false;
+    
     private void Start()
     {
-        StartBtn.SetActive(false);
+        //StartBtn.SetActive(false);
         StopBtn.SetActive(false);
+        CancelBtn.SetActive(false);
         DownloadBtn.SetActive(false);
         ShareBtn.SetActive(false);
         
@@ -42,25 +50,41 @@ public class RecorderManager : MonoBehaviour
         else {//don't use timer
 
             StartBtn.GetComponent<EventTrigger>().triggers[0].callback.AddListener(bed => {
-                StartRecording();
+                CancelBtn.SetActive(false);
                 DownloadBtn.SetActive(false);
                 ShareBtn.SetActive(false);
                 StartBtn.SetActive(false);
+                StartRecording();
             });
-
         }
-
-        Invoke(nameof(EnableRecording), 1f);
     }
 
-    private void EnableRecording()
+    /*private void OnDisable()
     {
-        CreateRecordingIngameAudio();
-    }
-    
+        StartBtn.GetComponent<EventTrigger>().triggers[0].callback.RemoveAllListeners();
+        StartBtn.GetComponent<EventTrigger>().triggers[1].callback.RemoveAllListeners();
+    }*/
+
     private void StartRecording() {
-        Debug.Log("StartRecordCallBack");
-        RecorderWebGL.Start(StartRecordCallBack);
+        
+        if(popupManager.isPopUpActive) return;
+        
+        // Active all childs of btnAudioSourcesParentGO
+        foreach (Transform child in _btnAudioSourcesParentGO.transform)
+        {
+            child.gameObject.SetActive(true);
+        }
+        
+        RecorderWebGL.Destroy();
+
+        DOVirtual.DelayedCall(0.5f, CreateRecordingIngameAudio).OnComplete(() =>
+        {
+            DOVirtual.DelayedCall(0.5f, () =>
+            {
+                RecorderWebGL.Start(StartRecordCallBack);
+                isRecording = true;
+            });
+        });
     }
 
     private void CreateRecordingMicrophoneIngameAudio() {
@@ -104,7 +128,6 @@ public class RecorderManager : MonoBehaviour
     public void Download() {
         
         //RecorderWebGL.Save();
-
         SaveRecord();
     }
 
@@ -136,12 +159,21 @@ public class RecorderManager : MonoBehaviour
 
     private void CreateMediaRecorderCallback(status stat) {
         StatusText.text = stat.ToString();
-        StartBtn.SetActive(true);
+        //StartBtn.SetActive(true);
 	}
     private void StopCallBack() {
         
         if (RecorderWebGL.GetRecordingFileExtension() != null) {
             RecordedText.text = "Recorded a " + RecorderWebGL.GetRecordingFileExtension() + " file";
+            
+            isRecording = false;
+            
+            foreach (Transform child in _btnAudioSourcesParentGO.transform)
+            {
+                child.gameObject.SetActive(false);
+            }
+            
+            CancelBtn.SetActive(true);
             DownloadBtn.SetActive(true);
             ShareBtn.SetActive(true);
         } 
@@ -175,6 +207,7 @@ public class RecorderManager : MonoBehaviour
         
         ShareBtn.SetActive(false);
         DownloadBtn.SetActive(false);
+        CancelBtn.SetActive(false);
         StartBtn.SetActive(true);
         
         ShareNSaveWebGL.Share(ShareCallBack, BlobPropertyPath, fileName);

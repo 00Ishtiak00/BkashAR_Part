@@ -5,12 +5,75 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d888f5f1-bef1-4408-b1a0-46f8e7741fd9" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.BkashMIndAR TEST Scale/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BkashMIndAR TEST Scale/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/MarksAssets/MindAR/Examples/Scenes/MindAR.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MarksAssets/MindAR/Examples/Scenes/MindAR.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MarksAssets/MindAR/Scripts/ImageTargetMono.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MarksAssets/MindAR/Scripts/ImageTargetMono.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/build_info" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StreamingAssets/build_info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Projects/Scripts/Dynamic Button Loading/ButtonData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Projects/Scripts/Dynamic Button Loading/ButtonData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Projects/Audio/128kbps/Loading Time.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Projects/Audio/128kbps/Loading Time.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Projects/Audio/128kbps/Nemonic.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Projects/Audio/128kbps/Nemonic.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Projects/Audio/Sequence wise Audio/1.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Projects/Audio/Sequence wise Audio/1.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Projects/Audio/Sequence wise Audio/10.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Projects/Audio/Sequence wise Audio/10.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Projects/Audio/Sequence wise Audio/11.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Projects/Audio/Sequence wise Audio/11.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Projects/Audio/Sequence wise Audio/12.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Projects/Audio/Sequence wise Audio/12.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Projects/Audio/Sequence wise Audio/13.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Projects/Audio/Sequence wise Audio/13.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Projects/Audio/Sequence wise Audio/14.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Projects/Audio/Sequence wise Audio/14.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Projects/Audio/Sequence wise Audio/15.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Projects/Audio/Sequence wise Audio/15.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Projects/Audio/Sequence wise Audio/16.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Projects/Audio/Sequence wise Audio/16.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Projects/Audio/Sequence wise Audio/17.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Projects/Audio/Sequence wise Audio/17.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Projects/Audio/Sequence wise Audio/18.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Projects/Audio/Sequence wise Audio/18.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Projects/Audio/Sequence wise Audio/19.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Projects/Audio/Sequence wise Audio/19.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Projects/Audio/Sequence wise Audio/2.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Projects/Audio/Sequence wise Audio/2.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Projects/Audio/Sequence wise Audio/20.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Projects/Audio/Sequence wise Audio/20.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Projects/Audio/Sequence wise Audio/21.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Projects/Audio/Sequence wise Audio/21.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Projects/Audio/Sequence wise Audio/22.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Projects/Audio/Sequence wise Audio/22.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Projects/Audio/Sequence wise Audio/23.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Projects/Audio/Sequence wise Audio/23.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Projects/Audio/Sequence wise Audio/24.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Projects/Audio/Sequence wise Audio/24.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Projects/Audio/Sequence wise Audio/25.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Projects/Audio/Sequence wise Audio/25.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Projects/Audio/Sequence wise Audio/26.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Projects/Audio/Sequence wise Audio/26.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Projects/Audio/Sequence wise Audio/27.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Projects/Audio/Sequence wise Audio/27.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Projects/Audio/Sequence wise Audio/28.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Projects/Audio/Sequence wise Audio/28.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Projects/Audio/Sequence wise Audio/29.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Projects/Audio/Sequence wise Audio/29.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Projects/Audio/Sequence wise Audio/3.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Projects/Audio/Sequence wise Audio/3.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Projects/Audio/Sequence wise Audio/30.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Projects/Audio/Sequence wise Audio/30.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Projects/Audio/Sequence wise Audio/31.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Projects/Audio/Sequence wise Audio/31.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Projects/Audio/Sequence wise Audio/32.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Projects/Audio/Sequence wise Audio/32.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Projects/Audio/Sequence wise Audio/33.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Projects/Audio/Sequence wise Audio/33.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Projects/Audio/Sequence wise Audio/34.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Projects/Audio/Sequence wise Audio/34.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Projects/Audio/Sequence wise Audio/35.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Projects/Audio/Sequence wise Audio/35.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Projects/Audio/Sequence wise Audio/36.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Projects/Audio/Sequence wise Audio/36.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Projects/Audio/Sequence wise Audio/37.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Projects/Audio/Sequence wise Audio/37.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Projects/Audio/Sequence wise Audio/38.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Projects/Audio/Sequence wise Audio/38.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Projects/Audio/Sequence wise Audio/39.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Projects/Audio/Sequence wise Audio/39.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Projects/Audio/Sequence wise Audio/4.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Projects/Audio/Sequence wise Audio/4.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Projects/Audio/Sequence wise Audio/40.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Projects/Audio/Sequence wise Audio/40.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Projects/Audio/Sequence wise Audio/41.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Projects/Audio/Sequence wise Audio/41.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Projects/Audio/Sequence wise Audio/42.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Projects/Audio/Sequence wise Audio/42.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Projects/Audio/Sequence wise Audio/43.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Projects/Audio/Sequence wise Audio/43.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Projects/Audio/Sequence wise Audio/44.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Projects/Audio/Sequence wise Audio/44.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Projects/Audio/Sequence wise Audio/45.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Projects/Audio/Sequence wise Audio/45.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Projects/Audio/Sequence wise Audio/46.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Projects/Audio/Sequence wise Audio/46.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Projects/Audio/Sequence wise Audio/47.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Projects/Audio/Sequence wise Audio/47.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Projects/Audio/Sequence wise Audio/48.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Projects/Audio/Sequence wise Audio/48.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Projects/Audio/Sequence wise Audio/49.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Projects/Audio/Sequence wise Audio/49.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Projects/Audio/Sequence wise Audio/5.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Projects/Audio/Sequence wise Audio/5.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Projects/Audio/Sequence wise Audio/50.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Projects/Audio/Sequence wise Audio/50.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Projects/Audio/Sequence wise Audio/51.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Projects/Audio/Sequence wise Audio/51.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Projects/Audio/Sequence wise Audio/52.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Projects/Audio/Sequence wise Audio/52.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Projects/Audio/Sequence wise Audio/53.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Projects/Audio/Sequence wise Audio/53.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Projects/Audio/Sequence wise Audio/54.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Projects/Audio/Sequence wise Audio/54.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Projects/Audio/Sequence wise Audio/55.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Projects/Audio/Sequence wise Audio/55.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Projects/Audio/Sequence wise Audio/6.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Projects/Audio/Sequence wise Audio/6.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Projects/Audio/Sequence wise Audio/7.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Projects/Audio/Sequence wise Audio/7.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Projects/Audio/Sequence wise Audio/8.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Projects/Audio/Sequence wise Audio/8.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Projects/Audio/Sequence wise Audio/9.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Projects/Audio/Sequence wise Audio/9.wav.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Projects/Scripts/Dynamic Button Loading/ButtonSetup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Projects/Scripts/Dynamic Button Loading/ButtonSetup.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Projects/Scripts/Dynamic Button Loading/PopupManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Projects/Scripts/Dynamic Button Loading/PopupManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Projects/Scripts/Managers/Recording/RecorderManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Projects/Scripts/Managers/Recording/RecorderManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewbuttonSystem/Build/NewbuttonSystem.data.unityweb" beforeDir="false" afterPath="$PROJECT_DIR$/NewbuttonSystem/Build/NewbuttonSystem.data.unityweb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewbuttonSystem/Build/NewbuttonSystem.framework.js.unityweb" beforeDir="false" afterPath="$PROJECT_DIR$/NewbuttonSystem/Build/NewbuttonSystem.framework.js.unityweb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewbuttonSystem/Build/NewbuttonSystem.loader.js" beforeDir="false" afterPath="$PROJECT_DIR$/NewbuttonSystem/Build/NewbuttonSystem.loader.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewbuttonSystem/Build/NewbuttonSystem.wasm.unityweb" beforeDir="false" afterPath="$PROJECT_DIR$/NewbuttonSystem/Build/NewbuttonSystem.wasm.unityweb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewbuttonSystem/StreamingAssets/build_info" beforeDir="false" afterPath="$PROJECT_DIR$/NewbuttonSystem/StreamingAssets/build_info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-6000.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-6000.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,7 +163,9 @@
       <workItem from="1733037851206" duration="7425000" />
       <workItem from="1733123306131" duration="2654000" />
       <workItem from="1733251419124" duration="14909000" />
-      <workItem from="1733359881499" duration="38000" />
+      <workItem from="1733359881499" duration="1435000" />
+      <workItem from="1733362272649" duration="2478000" />
+      <workItem from="1733513772956" duration="26000" />
     </task>
     <servers />
   </component>

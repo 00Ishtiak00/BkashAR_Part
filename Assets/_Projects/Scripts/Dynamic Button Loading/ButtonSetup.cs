@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 public class ButtonSetup : MonoBehaviour
@@ -8,25 +9,21 @@ public class ButtonSetup : MonoBehaviour
     [SerializeField] private Button button;
     [SerializeField] private int buttonIndex; // Index for this button
     [SerializeField] private GameObject _audioSourceParentGO; // Parent GameObject containing all AudioSources
-    [SerializeField] private AudioSource _audioSource; // Parent GameObject containing all AudioSources
+    [SerializeField] private GameObject _audioSourceGO; // Parent GameObject containing all AudioSources
     
     private void Start()
     {
         //Loop through all the gameobjects in the parent GameObject
         foreach (Transform child in _audioSourceParentGO.transform)
         {
-            //Check if the child has an AudioSource component
-            if (child.TryGetComponent(out AudioSource audioSource))
+            if(child.name == buttonIndex.ToString())
             {
-                if(child.name == buttonIndex.ToString())
-                {
-                    _audioSource = audioSource;
-                    break;
-                }
+                _audioSourceGO = child.gameObject;
+                break;
             }
         }
         
-        button.onClick.AddListener(() => popupManager.OnButtonClicked(buttonIndex, _audioSource));
+        button.onClick.AddListener(() => popupManager.OnButtonClicked(buttonIndex, _audioSourceGO));
     }
 
     private void OnDisable()

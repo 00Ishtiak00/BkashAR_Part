@@ -19,7 +19,7 @@ public class PopupManager : MonoBehaviour
     [SerializeField] private AudioSource audioSourceBg; // Audio source for playing clips
     [FormerlySerializedAs("audioClip")] [SerializeField] private AudioClip audioClipBg; // Audio source for playing clips
     
-    private AudioSource audioSourceForButton; // Audio source for playing clips
+    private GameObject audioSourceForButtonGO; // Audio source for playing clips
     
     [SerializeField] private ButtonDataList buttonDataList; // Reference to the ScriptableObject
     
@@ -29,6 +29,10 @@ public class PopupManager : MonoBehaviour
     private RectTransform popupRectTransform;
 
     [SerializeField]private ARDragZoom ARDragZoom;
+    
+    [SerializeField]private RecorderManager recorderManager;
+    
+    public bool isPopUpActive = false;
     private void Start()
     {
         // Get RectTransform of the popup panel
@@ -47,8 +51,10 @@ public class PopupManager : MonoBehaviour
         
     }
 
-    public void OnButtonClicked(int buttonIndex, AudioSource buttonAudioSource)
+    public void OnButtonClicked(int buttonIndex, GameObject buttonAudioSourceGO)
     {
+        isPopUpActive = true;
+        
         if (ARDragZoom.isDragging)
         {
             return;
@@ -67,10 +73,16 @@ public class PopupManager : MonoBehaviour
         // Set the image
         popupImage.sprite = data.image;
         
-        audioSourceForButton = buttonAudioSource;
-
         audioSourceBg.pitch = 0;
-        audioSourceForButton.pitch = 1;
+        
+        audioSourceForButtonGO = buttonAudioSourceGO;
+        
+        audioSourceForButtonGO.GetComponent<AudioSource>().pitch = 1;
+        
+        if(!recorderManager.isRecording)
+        {
+            audioSourceForButtonGO.SetActive(true);
+        }
 
         // Show and animate the popup
         ShowPopup();
@@ -93,7 +105,14 @@ public class PopupManager : MonoBehaviour
             .OnComplete(() =>
             {
                 popupPanel.SetActive(false); // Hide after animation
-                audioSourceForButton.pitch = 0;
+                audioSourceForButtonGO.GetComponent<AudioSource>().pitch = 0;
+                
+                if(!recorderManager.isRecording)
+                {
+                    audioSourceForButtonGO.SetActive(false);
+                }
+                
+                isPopUpActive = false;
                 //audioSource.Stop(); // Stop audio if playing
             });
     }
