@@ -4,8 +4,10 @@ using MarksAssets.RecorderWebGL;
 using UnityEngine.UI;
 using status = MarksAssets.RecorderWebGL.RecorderWebGL.status;
 using System.Collections;
+using Cysharp.Threading.Tasks;
 using DG.Tweening;
 using MarksAssets.ShareNSaveWebGL;
+using Sirenix.OdinInspector;
 using static MarksAssets.RecorderWebGL.RecorderWebGL;
 using UnityEngine.EventSystems;
 
@@ -26,13 +28,11 @@ public class RecorderManager : MonoBehaviour
 
     [SerializeField] private GameObject _btnAudioSourcesParentGO; // Parent GameObject containing all AudioSources
     
-    [SerializeField] private PopupManager popupManager;
-    
     public bool isRecording = false;
     
     private void Start()
     {
-        //StartBtn.SetActive(false);
+        StartBtn.SetActive(true);
         StopBtn.SetActive(false);
         CancelBtn.SetActive(false);
         DownloadBtn.SetActive(false);
@@ -58,33 +58,57 @@ public class RecorderManager : MonoBehaviour
             });
         }
     }
-
-    /*private void OnDisable()
+    
+    private async UniTaskVoid ActivateAllChildsOfBtnAudioSourcesParentGo()
     {
-        StartBtn.GetComponent<EventTrigger>().triggers[0].callback.RemoveAllListeners();
-        StartBtn.GetComponent<EventTrigger>().triggers[1].callback.RemoveAllListeners();
-    }*/
-
-    private void StartRecording() {
-        
-        if(popupManager.isPopUpActive) return;
-        
-        // Active all childs of btnAudioSourcesParentGO
         foreach (Transform child in _btnAudioSourcesParentGO.transform)
         {
             child.gameObject.SetActive(true);
+            await UniTask.Delay(10);
         }
         
-        RecorderWebGL.Destroy();
-
-        DOVirtual.DelayedCall(0.5f, CreateRecordingIngameAudio).OnComplete(() =>
+        DOVirtual.DelayedCall(1f, CreateRecordingIngameAudio).OnComplete(() =>
         {
-            DOVirtual.DelayedCall(0.5f, () =>
+            DOVirtual.DelayedCall(1f, () =>
             {
                 RecorderWebGL.Start(StartRecordCallBack);
                 isRecording = true;
             });
         });
+    }
+    
+    private async UniTaskVoid DeActivateAllChildsOfBtnAudioSourcesParentGo()
+    {
+        foreach (Transform child in _btnAudioSourcesParentGO.transform)
+        {
+            child.gameObject.SetActive(false);
+            await UniTask.Delay(10);
+        }
+        
+        isRecording = false;
+        CancelBtn.SetActive(true);
+        DownloadBtn.SetActive(true);
+        ShareBtn.SetActive(true);
+    }
+
+    [Button]
+    private void StartRecording() 
+    {
+        // Active all childs of btnAudioSourcesParentGO
+        /*foreach (Transform child in _btnAudioSourcesParentGO.transform)
+        {
+            child.gameObject.SetActive(true);
+        }
+        
+        DOVirtual.DelayedCall(1f, CreateRecordingIngameAudio).OnComplete(() =>
+        {
+            DOVirtual.DelayedCall(1f, () =>
+            {
+                RecorderWebGL.Start(StartRecordCallBack);
+                isRecording = true;
+            });
+        });*/
+        ActivateAllChildsOfBtnAudioSourcesParentGo().Forget();
     }
 
     private void CreateRecordingMicrophoneIngameAudio() {
@@ -102,10 +126,12 @@ public class RecorderManager : MonoBehaviour
     private void CreateRecordingNoAudio() {
         RecorderWebGL.CreateMediaRecorder(CreateMediaRecorderCallback, mro, false, false);
     }
-
-    public void StopRecording() {
-        
-        if (RecorderWebGL.GetState() != RecordingState.stopped) {//this is important to record on a timer.
+    
+    [Button]
+    public void StopRecording() 
+    {
+        if (RecorderWebGL.GetState() != RecordingState.stopped) 
+        {//this is important to record on a timer.
             if (timerRoutine != null) StopCoroutine(timerRoutine);//in case the user released the button before the time's up, stop timer(coroutine) prematurely.
             RecorderWebGL.Stop(StopCallBack);
         }
@@ -125,13 +151,27 @@ public class RecorderManager : MonoBehaviour
         }
     }
 
-    public void Download() {
-        
+    [Button]
+    public void DownloadRecord() 
+    {
         //RecorderWebGL.Save();
-        SaveRecord();
+        
+        DateTime currentTime = DateTime.Now; 
+        
+        string formattedTime = currentTime.ToString("yyyyMMddHHmmss");
+
+        fileName = "recording_" + formattedTime;
+        
+        //StartBtn.SetActive(true);
+        
+        if(fileName != string.Empty) 
+        {
+            ShareNSaveWebGL.Save(BlobPropertyPath, fileName);
+        }
     }
 
-    private void StartRecordCallBack() {
+    private void StartRecordCallBack() 
+    {
         if (recordForNSeconds < 0) {//don't record with timer. Stop recording with button.
             RecordedText.text = "";
             StopBtn.SetActive(true);
@@ -163,21 +203,32 @@ public class RecorderManager : MonoBehaviour
 	}
     private void StopCallBack() {
         
-        if (RecorderWebGL.GetRecordingFileExtension() != null) {
+        if (RecorderWebGL.GetRecordingFileExtension() != null) 
+        {
             RecordedText.text = "Recorded a " + RecorderWebGL.GetRecordingFileExtension() + " file";
             
-            isRecording = false;
+            StopBtn.SetActive(false);
+
+            DOVirtual.DelayedCall(1f, () =>
+            {
+                DeActivateAllChildsOfBtnAudioSourcesParentGo().Forget();
+            });
             
-            foreach (Transform child in _btnAudioSourcesParentGO.transform)
+            /*foreach (Transform child in _btnAudioSourcesParentGO.transform)
             {
                 child.gameObject.SetActive(false);
             }
             
-            CancelBtn.SetActive(true);
-            DownloadBtn.SetActive(true);
-            ShareBtn.SetActive(true);
+            DOVirtual.DelayedCall(0.5f, () =>
+            {
+                CancelBtn.SetActive(true);
+                DownloadBtn.SetActive(true);
+                ShareBtn.SetActive(true);
+                isRecording = false;
+            });*/
         } 
-        else {
+        else 
+        {
             RecordedText.text = "Recording failed";
         }
     }
@@ -201,35 +252,34 @@ public class RecorderManager : MonoBehaviour
         }
     }*/
     
-    public void ShareRecord() {
-        
+    [Button]
+    public void ShareRecord() 
+    {
         StatusText.text = "status: " + ShareNSaveWebGL.CanShare(BlobPropertyPath, fileName);
-        
-        ShareBtn.SetActive(false);
-        DownloadBtn.SetActive(false);
-        CancelBtn.SetActive(false);
-        StartBtn.SetActive(true);
         
         ShareNSaveWebGL.Share(ShareCallBack, BlobPropertyPath, fileName);
     }
     
-    private void SaveRecord() {
+    public void CancelRecord() 
+    {
+        CancelBtn.SetActive(false);
+        DownloadBtn.SetActive(false);
+        ShareBtn.SetActive(false);
         
-        DateTime currentTime = DateTime.Now; 
-        
-        string formattedTime = currentTime.ToString("yyyyMMddHHmmss");
-
-        fileName = "recording_" + formattedTime;
-        
-        if(fileName != string.Empty) 
+        DOVirtual.DelayedCall(1f, () =>
         {
-            ShareNSaveWebGL.Save(BlobPropertyPath, fileName);
-        }
+           RecorderWebGL.Destroy();
+        }).OnComplete(() =>
+        {
+            DOVirtual.DelayedCall(1f, () =>
+            {
+                StartBtn.SetActive(true);
+            });
+        });
     }
 
     private void ShareCallBack(ShareNSaveWebGL.status obj)
     {
         StatusText.text = "status: " + obj;
     }
-    
 }
